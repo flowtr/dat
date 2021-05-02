@@ -1,11 +1,11 @@
 {
-    "name": "@flowtr/boop",
+    "name": "@flowtr/dat",
     "version": "0.0.1",
-    "description": "",
+    "description": "A cli for manipulating json data",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "bin": {
-        "boop": "dist/cli.js"
+        "dat": "dist/cli.js"
     },
     "config": {
         "commitizen": {

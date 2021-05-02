@@ -29,7 +29,7 @@ const vm = new NodeVM({
     wrapper: "commonjs",
 });
 
-if (argv.help) {
+if (argv.help || process.argv.length < 3) {
     yargs.showHelp();
     process.exit(0);
 }
@@ -43,10 +43,10 @@ stdin.addListener("data", (input) => {
             babel
                 .transformAsync(
                     `
-        export default (input: string) => {
-            return input${argv.script}
-        }
-        `,
+                    export default (input: string) => {
+                        return input${argv.script}
+                    }
+                    `,
                     {
                         presets: ["@babel/preset-typescript"],
                         plugins: ["@babel/plugin-transform-modules-commonjs"],
