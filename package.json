@@ -1,9 +1,12 @@
 {
-    "name": "@toes/typescript-template",
+    "name": "@flowtr/boop",
     "version": "0.0.1",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "bin": {
+        "boop": "dist/cli.js"
+    },
     "config": {
         "commitizen": {
             "path": "cz-conventional-changelog"
@@ -30,9 +33,11 @@
     "author": "Theo Paris",
     "license": "UNLICENSE",
     "devDependencies": {
+        "@types/babel__core": "^7.1.14",
         "@types/chai": "4.2.16",
         "@types/mocha": "8.2.2",
         "@types/node": "14.14.41",
+        "@types/yargs": "^16.0.1",
         "@typescript-eslint/eslint-plugin": "4.22.0",
         "@typescript-eslint/parser": "4.22.0",
         "chai": "4.3.4",
@@ -47,5 +52,14 @@
         "prettier": "2.2.1",
         "ts-mocha": "8.0.0",
         "typescript": "4.2.4"
+    },
+    "dependencies": {
+        "@babel/core": "^7.14.0",
+        "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+        "@babel/preset-typescript": "^7.13.0",
+        "colorette": "^1.2.2",
+        "json5": "^2.2.0",
+        "vm2": "^3.9.3",
+        "yargs": "^17.0.0"
     }
 }
